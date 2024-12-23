@@ -4,8 +4,8 @@ import os
 
 app = Flask(__name__, template_folder='templates')
 
-UPLOAD_FOLDER = 'uploads'
-CONVERTED_FOLDER = 'converted'
+UPLOAD_FOLDER = '/uploads'
+CONVERTED_FOLDER = '/converted'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 os.makedirs(CONVERTED_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
