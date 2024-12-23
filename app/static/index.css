@@ -1,0 +1,304 @@
+/*--Index Page Style--*/
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*--Intro Style--*/
+    & .intro {
+        width: 1100px;
+        margin-top: 35px;
+
+        /*--Title Style*/
+        & h1{
+            color: var(--color-blue1);
+            text-align: center;
+            font-size: 36px;
+        }
+
+        /*--Paragraph Style--*/
+        & p {
+            color: var(--color-black2);
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+
+    /*--Service Bar Style--*/
+    & .allservices {
+        width: 96%;
+        margin-top: 40px;
+        background-color: var(--color-white1);
+        border-radius: 15px;
+        padding: 15px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+        & h2{
+            margin-bottom: 15px;
+        }
+
+        /*--Service Display Style--*/
+        & .services {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+            /*--Service Style--*/
+            & .service {
+                background-color: var(--color-white2);
+                padding: 10px;
+                border-radius: 15px;
+                color: black;
+                text-decoration: none;
+                transition: all .3s;
+
+                & .iconservice {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 200px;
+
+                    & .serviceicon {
+                        font-size: 75px;
+                    }
+                }
+            }
+
+            & .service:hover {
+                transform: translateY(10px);
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            }
+        }
+    }
+}
+
+/*--Website Responsiveness--*/
+@media screen and (max-width: 1250px) {
+    .content {
+        & .intro {
+            transition: all 1s;
+            width: 1000px;
+
+            & h1 {
+                transition: all 1s;
+                font-size: 32px;
+            }
+
+            & p {
+                transition: all 1s;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .content {
+        & .intro {
+            transition: all 1s;
+            width: 850px;
+
+            & h1 {
+                transition: all 1s;
+                font-size: 26px;
+            }
+
+            & p {
+                transition: all 1s;
+                font-size: 13px;
+            }
+        }
+
+        & .allservices {
+            transition: all 1s;
+            width: 94%;
+            margin-top: 25px;
+
+            & h2 {
+                font-size: 14px;
+                transition: all 1s;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .content {
+        & .intro {
+            transition: all 1s;
+            width: 750px;
+
+            & h1 {
+                transition: all 1s;
+                font-size: 22px;
+            }
+
+            & p {
+                transition: all 1s;
+                font-size: 11px;
+            }
+        }
+
+        & .allservices {
+            transition: all 1s;
+            width: 92%;
+
+            & h2 {
+                font-size: 29px;
+                transition: all 1s;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        & .intro {
+            transition: all 1s;
+            width: 560px;
+            margin-top: 16px;
+
+            & h1 {
+                transition: all 1s;
+                font-size: 17px;
+            }
+
+            & p {
+                transition: all 1s;
+                font-size: 9px;
+            }
+        }
+
+        & .allservices {
+            transition: all 1s;
+            width: 92%;
+
+            & h2 {
+                font-size: 15px;
+                transition: all 1s;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .content {
+        & .intro {
+            transition: all 1s;
+            width: 425px;
+
+            & h1 {
+                transition: all 1s;
+                font-size: 14px;
+            }
+
+            & p {
+                transition: all 1s;
+                font-size: 7px;
+            }
+        }
+
+        & .allservices {
+            transition: all 1s;
+            width: 90%;
+            margin-top: 15px;
+
+            & h2 {
+                font-size: 12px;
+                transition: all 1s;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .content {
+        & .intro {
+            transition: all 1s;
+            width: 375px;
+
+            & h1 {
+                transition: all 1s;
+                font-size: 12px;
+            }
+
+            & p {
+                transition: all 1s;
+                font-size: 6px;
+            }
+        }
+
+        & .allservices {
+            transition: all 1s;
+            width: 88%;
+            margin-top: 10px;
+
+            & h2 {
+                font-size: 20px;
+                transition: all 1s;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .content {
+        & .intro {
+            transition: all 1s;
+            width: 320px;
+
+            & h1 {
+                transition: all 1s;
+                font-size: 10px;
+            }
+
+            & p {
+                transition: all 1s;
+                font-size: 5px;
+            }
+        }
+
+        & .allservices {
+            transition: all 1s;
+            width: 86%;
+            margin-top: 10px;
+
+            & h2 {
+                font-size: 9px;
+                transition: all 1s;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .content {
+        & .intro {
+            transition: all 1s;
+            width: 300px;
+
+            & h1 {
+                transition: all 1s;
+                font-size: 10px;
+            }
+
+            & p {
+                transition: all 1s;
+                font-size: 5px;
+            }
+        }
+
+        & .allservices {
+            transition: all 1s;
+            width: 84%;
+            margin-top: 10px;
+
+            & h2 {
+                font-size: 10px;
+                transition: all 1s;
+            }
+        }
+    }
+}

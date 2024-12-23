@@ -1,0 +1,93 @@
+/*--Index Page Style--*/
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .intro {
+        margin-top: 35px;
+
+        & h1 {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        & p {
+            font-size: 22px;
+            color: var(--color-black2);
+        }
+    }
+
+    & form {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+
+        & input[type="file"] {
+            display: none;
+        }
+
+        & label {
+            background-color: var(--color-green1);
+            height: 75px;
+            padding: 0 25px;
+            border-radius: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--color-white1);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            transition: all .3s;
+            text-align: center;
+            align-content: center;
+        }
+
+        & label:hover {
+            transform: translateY(10px);
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+        }
+
+        & .preview {
+            margin-top: 20px;
+            background-color: var(--color-white1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+            & h3 {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+
+            & img {
+                width: 350px;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+            }
+        }
+
+        & button {
+            background-color: var(--color-green1);
+            height: 75px;
+            padding: 0 25px;
+            border-radius: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--color-white1);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            transition: all .3s;
+            text-align: center;
+            align-content: center;
+            border: none;
+            margin-top: 15px;
+        }
+
+
+        & button:hover {
+            transform: translateY(10px);
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNG to JPG converter</title>
+
+    <!--CSS Link-->
+    <link rel="stylesheet" href="../static/global.css">
+    <link rel="stylesheet" href="../static/converter.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!--Page Header-->
+    <header>
+        <!--Page Logo-->
+        <a href="index.html" class="logo">
+            <h1 translate="no"><span class="blue">V</span>Converter</h1>
+        </a>
+
+        <!--Navegation Bar-->
+        <div class="navbar">
+            <a href="png_jpg.html">PNG <span class="blue">-></span> JPG</a>
+        </div>
+
+        <!--Menu Icon-->
+        <i class='bx bx-menu'></i>
+    </header>
+
+    <div class="content">
+        <div class="intro">
+            <h1 class="green">PNG to JPG</h1>
+            <p>Convert images with PNG extension to JPG extension.</p>
+        </div>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" id="imageInput" accept="image/*" name="file" required>
+            <label for="imageInput">Select or Drag a File</label>
+
+            <div class="preview" id="previewSection">
+                <h3><span class="green">PRE</span>VIEW</h3>
+                <img id="preview" alt="Image preview will appear here" />
+            </div>
+
+            <button type="submit" id="submitButton">Send</button>
+        </form>
+    </div>
+
+    <script src="../static/converter.js"></script>
+</body>
+</html>
