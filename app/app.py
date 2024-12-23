@@ -19,7 +19,7 @@ def index():
 def outra_pagina():
     return render_template('png_jpg.html')
 
-@app.route('/uploads', methods=['POST'])
+@app.route('/upload', methods=['POST'])
 def upload_file():
     if 'file' not in request.files:
         return "Nenhum arquivo enviado!", 400
