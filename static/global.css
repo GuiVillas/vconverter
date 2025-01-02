@@ -1,0 +1,294 @@
+/*========== GLOBAL FONTS ==========*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=League+Gothic&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*========== VARIABLES CSS ==========*/
+:root {
+    /*========== SIZES ==========*/
+    --header-height: 3.5rem;
+    --header-padding: 0 25px;
+
+    /*========== COLORS ==========*/
+    --body-color: rgb(245, 245, 245);
+    --header-color: rgb(230, 230, 230);
+
+    --white-color: rgb(245, 245, 245);
+    --gray-color: rgb(210, 210, 210);
+    --dark-gray-color: rgb(50,50,50);
+    --black-color: rgb(20, 20, 20);
+    --blue-color: rgb(0, 130, 255);
+    --purple-color: rgb(130,0,255);
+    --orange-color: rgb(255,130,0);
+
+    /*========== FONTS ==========*/
+    --body-font: "Poppins", arial, sans-serif;
+    --normal-font-size: 16px;
+
+    /*========== Z INDEX ==========*/
+    --z-fixed: 100;
+}
+
+/*========== COLORS ==========*/
+.blue {
+    color: var(--blue-color);
+}
+
+.purple {
+    color: var(--purple-color);
+}
+
+.orange {
+    color: var(--orange-color);
+}
+
+.dark-gray {
+    color: var(--dark-gray-color);
+}
+
+/*========== BASE ==========*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*========== HEADER ==========*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--header-color);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: var(--z-fixed);
+}
+
+/*========== NAV ==========*/
+.nav {
+    height: var(--header-height);
+    padding: var(--header-padding);
+}
+
+.nav_logo, .nav_burger, .nav_close {
+    color: var(--black-color);
+}
+
+.nav_data {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_toggle {
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+
+.nav_burger, .nav_close {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    inset: 0;
+    margin: auto;
+    font-size: 34px;
+    cursor: pointer;
+    transition: opacity .1s, transform .4s;
+}
+
+.nav_close {
+    opacity: 0;
+}
+
+/*========== NAVEGATION FOR MOBILE DEVICES ==========*/
+@media screen and (max-width: 1118px) {
+    .nav_menu {
+        position: absolute;
+        left: 0;
+        top: 2.5rem;
+        width: 100%;
+        background-color: gray;
+        height: calc(100vh - 3.5rem);
+        overflow: auto;
+        pointer-events: none;
+        opacity: 0;
+        transition: top .4s, opacity .3s;
+    }
+
+    .nav_menu::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .nav_list {
+        background-color: var(--header-color);
+        padding-top: 1rem;
+    }
+}
+
+.nav_link {
+    color: var(--black-color);
+    background-color: var(--header-color);
+    font-weight: bold;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color .3s;
+}
+
+.nav_link:hover {
+    background-color: var(--gray-color);
+}
+
+/*========== SHOW MENU ==========*/
+.show_menu {
+    opacity: 1;
+    top: 3.5rem;
+    pointer-events: initial;
+}
+
+/*========== SHOW ICON ==========*/
+.show_icon .nav_burger{
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.show_icon .nav_close {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+/*========== DROPDOWN ==========*/
+.dropdown_item {
+    cursor: pointer;
+}
+
+.dropdown_arrow {
+    font-size: 1.5rem;
+    font-weight: initial;
+    transition: transform .4s;
+}
+
+.dropdown_link {
+    padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+    color: var(--black-color);
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    font-weight: 500;
+    transition: background-color .3s;
+}
+
+.dropdown_link i {
+    font-size: 1.7rem;
+    font-weight: initial;
+}
+
+.dropdown_link:hover {
+    background-color: var(--gray-color);
+}
+
+.dropdown_menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s ease-out;
+}
+
+/*========== SHOW DROPDOWN MENU & SUBMENU ==========*/
+.dropdown_item:hover .dropdown_menu {
+    max-height: 1000px;
+    transition: max-height .4s ease-in;
+}
+
+/*========== ROTATE DROPDOWN ICON ==========*/
+.dropdown_item:hover .dropdown_arrow {
+    transform: rotate(180deg);
+}
+
+/*========== FOR SMALL DEVICES ==========*/
+@media screen and (max-width: 340px) {
+    .container {
+        margin-inline: 1rem;
+    }
+
+    .nav_link {
+        padding-inline: 1rem;
+    }
+}
+
+/*========== FOR LARGE DEVICES ==========*/
+@media screen and (min-width: 1118px) {
+    .container {
+        margin-inline: auto;
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 2rem);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav_toggle {
+        display: none;
+    }
+
+    .nav_list {
+        height: 100%;
+        display: flex;
+        column-gap: 3rem;
+    }
+
+    .nav_link {
+        height: 100%;
+        padding: 0 .5rem;
+        justify-content: initial;
+        column-gap: .25rem;
+    }
+
+    .nav_link:hover {
+        background-color: transparent;
+    }
+
+    .dropdown_item {
+        position: relative;
+    }
+
+    .dropdown_menu {
+        max-height: initial;
+        overflow: initial;
+        position: absolute;
+        left: 0;
+        top: 6rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .3s, top .3s;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .dropdown_link {
+        padding-inline: 1rem 3.5rem;
+        background-color: var(--header-color);
+    }
+
+    /*=========== SHOW DROPDOWN MENU ==========*/
+    .dropdown_item:hover .dropdown_menu {
+        opacity: 1;
+        top: 5.5rem;
+        pointer-events: initial;
+        transition: top .3s;
+    }
+}
