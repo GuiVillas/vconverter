@@ -1,8 +1,9 @@
-from main import app
-from flask import render_template, request, send_file
+from flask import Flask, render_template, request, send_file
 import os
 from PIL import Image, ImageOps
 import uuid
+
+app = Flask(__name__)
 
 # Checking id converted folder exist
 CONVERTED_FOLDER = "converted"
@@ -171,3 +172,6 @@ def convert_png_to_bmp():
     
     except Exception as e:
         return f"Erro processing file: {str(e)}", 500
+    
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
